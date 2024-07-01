@@ -1,4 +1,4 @@
-#!/Users/hugojohnson/Desktop/beanie_template/myenv/bin/python3.12
+#!/Users/hugojohnson/Desktop/proyecto/proyecto-backend/myenv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
