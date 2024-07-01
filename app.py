@@ -2,6 +2,7 @@ from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from mongodb.database import init_db
 import uvicorn
+import os
 
 from book.routes import router as BookRouter
 from auth.routes import router as AuthRouter
@@ -43,4 +44,5 @@ async def index() -> dict:
     return {"message": "Welcome to your books app!"}
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=3001, reload=True)
+    port = int(os.getenv("PORT", 3001))
+    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)
